@@ -67,3 +67,14 @@ for (var i = 0; i < catalogo.length; i++) {
     console.log("Diagnóstico: " + catalogo[i]._diagn);
 }
 }
+
+
+function filterItems(arr, query) {
+  return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
+}
+
+console.log(filterItems(catalogo, "ap")); 
+console.log(filterItems(catalogo, "an"));
+
+
+
