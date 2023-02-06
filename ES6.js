@@ -43,7 +43,7 @@ class Paciente {
     }
     agregarPaciente() {
         catalogo.push({ _nombre: this._nombre, _edad: this._edad, _rut: this._rut, _diagn: this._diagn });
-        console.log(this._nombre)
+        console.log(`Se agrega al usuario ${this._nombre}`);
     }
 }
 //Se crean nuevas personas
@@ -58,23 +58,18 @@ persona2.agregarPaciente();
 persona3.agregarPaciente();
 persona4.agregarPaciente();
 persona5.agregarPaciente();
+
 // Mostrar todos los datos de los usuarios registrados //
-function enlistarUsuarios(){
-for (var i = 0; i < catalogo.length; i++) {
-    console.log("Nombre: " + catalogo[i]._nombre);
-    console.log("Edad: " + catalogo[i]._edad);
-    console.log("Rut: " + catalogo[i]._rut);
-    console.log("Diagnóstico: " + catalogo[i]._diagn);
-}
-}
-
-
-function filterItems(arr, query) {
-  return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
+function enlistarUsuarios() {
+    for (var i = 0; i < catalogo.length; i++) {
+        console.log("Nombre: " + catalogo[i]._nombre);
+        console.log("Edad: " + catalogo[i]._edad);
+        console.log("Rut: " + catalogo[i]._rut);
+        console.log("Diagnóstico: " + catalogo[i]._diagn);
+    }
 }
 
-console.log(filterItems(catalogo, "ap")); 
-console.log(filterItems(catalogo, "an"));
-
-
-
+ function filterItems(arr, query) {
+     return arr.filter((obj) => obj._nombre.toLowerCase().includes(query.toLowerCase()));
+ }
+ console.log(filterItems(catalogo, "ap"));
