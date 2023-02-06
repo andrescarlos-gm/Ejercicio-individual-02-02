@@ -68,6 +68,7 @@ function enlistarUsuarios() {
         console.log("Diagnóstico: " + catalogo[i]._diagn);
     }
 }
+// filtrar los datos de los usuarios registrados //
 
  function filterItems(arr, query) {
      return arr.filter((obj) => obj._nombre.toLowerCase().includes(query.toLowerCase()));
