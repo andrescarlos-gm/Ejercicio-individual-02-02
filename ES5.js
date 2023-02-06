@@ -1,3 +1,4 @@
+//base de datos inicial
 
 var usuario =
 [{ nombre: 'Pamela', edad: '21', rut: '2344234', diagn: 'Fiebre uterina' },
@@ -9,11 +10,11 @@ var usuario =
 //Funcion para crear nuevo objeto de la clase 'Usuario'
 
 function agregarUsuario(nombre, rut, edad, diagn) {
-    formNombre=this.nombre
-    formRUT=this.rut
-    formEdad=this.edad
-    this.diagnostico = [];
-    usuario.push({ nombre: this.nombre, edad: this.edad, rut: this.rut, diagn: this.diagn });
+    let nomb = nombre;
+    let ru = rut;
+    let age = edad;
+    let dgn = diagn
+    usuario.push({ nombre: nomb, edad: age, rut: ru, diagn: dgn });
 }
 
 //Items added to array
@@ -25,6 +26,7 @@ var persona4 = new agregarUsuario('Daniela', '50', '8928876-2', 'Esguince');
 var persona5 = new agregarUsuario('Ignacio', '40', '10456345-5', 'Tetanos');
 
 // Show Users
+
 function showUsers() {
     for (var i = 0; i < usuario.length; i++) {
         console.log("Nombre: " + usuario[i].nombre);
@@ -38,51 +40,3 @@ function showUsers() {
      return arr.filter((obj) => obj.nombre.toLowerCase().includes(query.toLowerCase()));
  }
  console.log(filterItems(usuario, "ap"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//This function create a new object from the class 'Consultorio'
-
-let listaConsultorios = [];
-function Consultorio(nombre) {
-    this.nombre = nombreConsultorio;
-    this.paciente = [];
-}
-
-function agregarConsultorio() {
-    nombreConsultorio = document.querySelector('#input-consultorio').value;
-    validator = true;
-
-    listaConsultorios.forEach(element => {
-        if (element.nombre == nombreConsultorio) {
-            validator = false;
-        }
-    })
-}
-if (validator) {
-    nombreConsultorio = new Consultorio(nombreConsultorio);
-    listaConsultorios.push(nombreConsultorio);
-    selectCesfam.selectedIndex = -1;
-    renderDOM();
-    respaldoLocal();
-
-
-} else {
-    alert('Este consultorio ya existe');
-}
-
-
